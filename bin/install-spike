@@ -13,3 +13,7 @@ cd $SPIKE/build
 make -j4
 make -j4
 make install
+
+cd $SPIKE_VIRTIO
+make -j4 all
+make install
