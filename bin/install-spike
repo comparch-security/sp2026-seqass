@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+set -x
+
+cd $SPIKE
+git submodule update --init --recursive
+mkdir build
+cd build
+../configure --prefix=$RISCV
+cd $CM
+make clean
+make -j4
+cd $SPIKE/build
+make -j4
+make -j4
+make install

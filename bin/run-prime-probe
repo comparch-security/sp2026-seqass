@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+set -x
+
+# compile the test
+cd $CM
+git checkout alg/common.hpp
+git apply patch/cache-$1-nomap.patch
+make alg/prime-probe
+
+# run the test
+echo "\nRun the test. If too slow, reduce samples to 50 for a trial run"
+./alg/prime-probe --samples 1000
