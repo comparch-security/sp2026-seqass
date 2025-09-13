@@ -1,9 +1,0 @@
-#!/usr/bin/bash
-set -x
-
-cd $ARTIFACT/ball-test/mirage/security_analysis
-make clean
-make -j4
-cd results/base/
-./run_size.sh 100
-python3 get_mirage_target_spill.py
