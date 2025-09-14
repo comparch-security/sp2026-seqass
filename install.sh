@@ -12,16 +12,16 @@ git clone --recurse-submodules --branch sp2026-seqass https://github.com/comparc
 git clone https://github.com/comparch-security/sp2026-seqass-ball-test.git $BALL_TEST
 
 # infrastructure
-git clone --branch 2023.12.12 https://github.com/riscv-collab/riscv-gnu-toolchain.git $TOOLCHAIN
+#git clone --branch 2023.12.12 https://github.com/riscv-collab/riscv-gnu-toolchain.git $TOOLCHAIN
 git clone https://github.com/comparch-security/spike-virtio-devices.git $SPIKE_VIRTIO
 #git clone https://github.com/comparch-security/speckle-2017.git $SPECKLE_REPO
-git clone https://github.com/comparch-security/spike-sdk-spec2017 $SPIKE_SDK
+#git clone https://github.com/comparch-security/spike-sdk-spec2017 $SPIKE_SDK
 
 # compile spike
 install-spike
 
 # compile riscv tool chain
-install-riscv-toolchain
+#install-riscv-toolchain
 
 #install spike sdk
 install-spike-sdk
