@@ -6,10 +6,10 @@ CURD=$PWD
 cd $CM
 git checkout alg/common.hpp
 git apply patch/cache-$1-nomap.patch
-MODE=release make alg/prime-probe
+MODE=release make alg/ct
 
 # run the test
-./alg/prime-probe --samples 50 --same-target 1 --test-warm 1 | tee $CURD/$1.log
+./alg/ct --same-target 1 --samples 100 | tee $CURD/$1-ct.log
 
 # actual test used in paper
-# ./alg/prime-probe --samples 1000
+# ./alg/ct --same-target 1 --samples 1000

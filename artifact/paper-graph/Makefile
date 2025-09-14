@@ -26,7 +26,6 @@ all: $(PDF_FILES) $(OTHER_PDF_FILES)
 
 $(PDF_FILES): %.pdf:%.cmd $$($$@.dep)
 	gnuplot -c $^
-	pdfcrop $@ $@
 
 clean:
 	-rm $(PDF_FILES) $(OTHER_PDF_FILES) $(TMP_FILE)

@@ -2,13 +2,14 @@
 set -x
 
 # compile the test
+CURD=$PWD
 cd $CM
 git checkout alg/common.hpp
 git apply patch/cache-$1-nomap.patch
-make alg/effective-cloc-acc
+MODE=release make alg/effective-cloc-acc
 
 # run the test
-./alg/effective-cloc-acc --samples 10 --same-target 1 --test-warm 1
+./alg/effective-cloc-acc --samples 10 --same-target 1 --test-warm 1 | tee $CURD/$1.log
 
 # actual test used in paper
 # ./alg/effective-cloc-acc --samples 200 --same-target 1 --test-warm 1

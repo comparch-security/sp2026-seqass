@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+set -x
+
+# compile the test
+CURD=$PWD
+cd $CM
+git checkout alg/common.hpp
+git apply patch/cache-$1-nomap.patch
+MODE=release make alg/ct
+
+# run the test
+./alg/ct --prefetch-target 1 --same-target 1 --samples 100 | tee $CURD/$1-ct-prefetch.log
+
+# actual test used in paper
+# ./alg/ct --prefetch-target 1 --same-target 1 --samples 1000
