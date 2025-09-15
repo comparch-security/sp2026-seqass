@@ -9,7 +9,7 @@ git apply patch/cache-$1-nomap.patch
 MODE=release make alg/ppp
 
 # run the test
-./alg/ppp --same-target 1 --samples 100 | tee $CURD/$1-ppp.log
+./alg/ppp --same-target 1 --samples 20 > $CURD/$1-ppp.log &
 
 # actual test used in paper
 # ./alg/ppp --same-target 1 --samples 1000

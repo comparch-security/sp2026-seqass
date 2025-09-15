@@ -9,7 +9,7 @@ git apply patch/cache-$1-nomap.patch
 MODE=release make alg/prime-probe
 
 # run the test
-./alg/prime-probe --samples 50 --same-target 1 --test-warm 1 | tee $CURD/$1.log
+./alg/prime-probe --samples 20 --same-target 1 --test-warm 1 > $CURD/$1.log &
 
 # actual test used in paper
 # ./alg/prime-probe --samples 1000

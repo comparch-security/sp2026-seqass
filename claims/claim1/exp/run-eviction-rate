@@ -9,7 +9,7 @@ git apply patch/cache-$1-nomap.patch
 MODE=release make alg/effective-cloc-acc
 
 # run the test
-./alg/effective-cloc-acc --samples 10 --same-target 1 --test-warm 1 | tee $CURD/$1.log
+./alg/effective-cloc-acc --samples 5 --same-target 1 --test-warm 1 > $CURD/$1.log &
 
 # actual test used in paper
 # ./alg/effective-cloc-acc --samples 200 --same-target 1 --test-warm 1
