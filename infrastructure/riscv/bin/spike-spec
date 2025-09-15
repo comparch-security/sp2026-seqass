@@ -1,0 +1,1 @@
+spike -p1 --dtb=$RISCV/spec2017/spec.dtb ${@:1} --extlib=libvirtio9pdiskdevice.so --device="virtio9p,path=$RISCV/spec2017/overlay" $RISCV/spec2017/spec-bbl
