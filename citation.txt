@@ -1,0 +1,6 @@
+@inproceedings{Song2026,
+  title={{SeqAss}: Using sequential associative caches to mitigate conflict-based cache attacks with reduced cache misses and performance overhead},
+  author={Wei Song and Zhidong Wang and Jinchi Han and Da Xie and Hao Ma and Peng Liu},
+  booktitle={IEEE Symposium on Security and Privacy},
+  year={2026}
+}

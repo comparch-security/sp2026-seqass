@@ -1,0 +1,3 @@
+This "artifact" is licensed under the 3-clause BSD License.
+"Spike" is licensed the 3-clause BSD License (see artifact/spike-flexicas/LICENSE).
+"FlexiCAS" is licensed under GPL (see artifact/spike-flexicas/flexicas/README.md).
