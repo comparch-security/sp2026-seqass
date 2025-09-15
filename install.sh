@@ -9,7 +9,6 @@ sudo apt-get -y install autoconf automake autotools-dev curl python3 python3-pip
 
 # artifact
 git clone --recurse-submodules --branch sp2026-seqass https://github.com/comparch-security/spike-flexicas.git $SPIKE
-git clone https://github.com/comparch-security/sp2026-seqass-ball-test.git $BALL_TEST
 
 # infrastructure
 git clone https://github.com/comparch-security/spike-virtio-devices.git $SPIKE_VIRTIO
