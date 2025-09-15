@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+set -x
+
+# compile spike
+CURD=$PWD
+cd $CM
+git checkout spike-cache.cc
+git apply patch/spike-$1-remap.patch
+
+cd $SPIKE/build
+rm libflexicas.* spike-cache.*
+make clean -C $CM
+MODE=release make -j4 -C $CM
+make install
