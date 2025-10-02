@@ -1,0 +1,13 @@
+flexicas_subproject_deps = \
+
+flexicas_install_shared_lib = yes
+
+flexicas_install_hdrs = \
+	flexicas-pfc.h \
+
+flexicas_srcs = \
+	spike-cache.cc \
+
+flexicas_precompiled = \
+	@top_srcdir@/flexicas/libflexicas.a \
+	@top_srcdir@/flexicas/cryptopp/libcryptopp.a \

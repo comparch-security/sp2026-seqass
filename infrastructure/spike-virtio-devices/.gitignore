@@ -1,0 +1,10 @@
+libspikedevices.so
+libvirtioblockdevice.so
+libvirtio9pdiskdevice.so
+
+*.o
+*.d
+
+.vscode/
+compile_commands.json
+.cache/

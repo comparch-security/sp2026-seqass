@@ -1,0 +1,8 @@
+*~
+*.gch
+*.o
+*.a
+*.so
+regression/*.log
+regression/*.out
+
