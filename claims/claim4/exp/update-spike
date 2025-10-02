@@ -4,8 +4,9 @@ set -x
 # compile spike
 CURD=$PWD
 cd $CM
-git checkout spike-cache.cc
-git apply patch/spike-$1-remap.patch
+cp patch/spike-cache.cc spike-cache.cc
+patch spike-cache.cc patch/spike-$1-remap.patch
+touch spike-cache.cc
 
 cd $SPIKE/build
 rm libflexicas.* spike-cache.*

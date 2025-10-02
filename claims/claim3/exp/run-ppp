@@ -4,8 +4,9 @@ set -x
 # compile the test
 CURD=$PWD
 cd $CM
-git checkout alg/common.hpp
-git apply patch/cache-$1-nomap.patch
+cp patch/common.hpp alg/common.hpp
+patch alg/common.hpp patch/cache-$1-nomap.patch
+touch alg/common.hpp
 MODE=release make alg/ppp
 
 # run the test
